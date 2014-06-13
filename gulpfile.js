@@ -119,14 +119,13 @@ gulp.task('connect', function() {
   });
 });
 
+gulp.task('deploy', function () {
+  gulp.src("build/**/*");
+});
+
 
 // Tasks
 // =======================================================
 
 gulp.task('default', ['watch', 'connect']);
-gulp.task('compile', ['html', 'css', 'js', 'copyImages']);
-
-gulp.task('deploy', function () {
-  gulp.src("build/*")
-  .pipe(plugin.deploy(branch, 'gh-pages'));
-});
+gulp.task('compile', ['html', 'css', 'js', 'copyImages', 'deploy']);
