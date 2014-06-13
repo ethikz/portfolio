@@ -1,0 +1,91 @@
+@import 'grid';
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600);
+
+
+// //////////////////////
+// CONFIG
+// //////////////////////
+
+$total_width: 100%;
+$container_margin: auto;
+$gutter_width: 2%;
+$max_width: 100%;
+
+$color_white: #fff;
+$color_red: #d53232;
+$color_grey: #d2c3c2;
+$color_dk_grey: #2d3339;
+$color_nearlyblack: #282728;
+$color_nearlynearlyblack: #454545;
+$color_body: #2d3339;
+$color_headlines: #b7b7b7;
+$color_light_red: tint($color_red, 50%);
+$color_dark_red: shade($color_red, 50%);
+
+$break-small: 500px;
+$break-medium: 768px;
+$break-large: 1024px;
+
+
+
+// //////////////////////
+// MODULE STYLES
+// //////////////////////
+
+section {
+	color: $color_dk_grey;
+	text-align: center;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+
+///////////////////
+// LAYOUT < 720  //
+///////////////////
+
+$total_width: 100%;
+$container_margin: auto;
+$gutter_width: 2%;
+$max_width: 2000px;
+
+section {
+	@include container();
+	@include clearfix();
+}
+
+
+///////////////////
+// LAYOUT > 720  //
+///////////////////
+
+@media screen and (min-width: 720px) {
+
+	$total_width: 100%;
+	$container_margin: auto;
+	$gutter_width: 2%;
+	$max_width: 2000px;
+
+	section {
+		@include container();
+		@include clearfix();
+	}
+}
+
+
+///////////////////
+// LAYOUT > 960  //
+///////////////////
+
+@media all and (min-width: 960px) {
+
+	$total_width: 100%;
+	$container_margin: auto;
+	$gutter_width: 2%;
+	$max_width: 2000px;
+
+	section {
+		@include container();
+		@include clearfix();
+	}
+}

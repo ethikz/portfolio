@@ -1,0 +1,14 @@
+.about {
+  @include container();
+  @include clearfix();
+  padding: 2% 1%;
+  width: 100%;
+  background-color: $color_red;
+  font-size: rem(16);
+  
+  .about-content {
+    position: relative;
+    margin-bottom: 40px;
+    color: $color_white;
+  }
+}

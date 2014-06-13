@@ -1,0 +1,31 @@
+.btn,
+.form .btn {
+  @extend %ease-trans;
+  position: relative;
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 14px 15px 12px;
+  height: auto;
+  border: 1px solid $color_white;
+  background: transparent;
+  color: $color_white;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: none;
+  font-weight: bold;
+  font-size: rem(16);
+  line-height: 1;
+  
+  &:hover {
+    background: $color_white;
+    color: $color_red;
+  }
+  
+  span {
+    position: relative;
+    top: -2px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+  }
+}
