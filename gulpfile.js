@@ -128,6 +128,5 @@ gulp.task('compile', ['html', 'css', 'js', 'copyImages']);
 
 gulp.task('deploy', function () {
   gulp.src("build/*")
-  .pipe(deploy(gitRemoteUrl, remote))
-  .pipe(deploy(branch, 'gh-pages'));
+  .pipe(plugin.deploy(branch, 'gh-pages'));
 });
