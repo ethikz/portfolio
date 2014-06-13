@@ -127,7 +127,7 @@ gulp.task('default', ['watch', 'connect']);
 gulp.task('compile', ['html', 'css', 'js', 'copyImages']);
 
 gulp.task('deploy', function () {
-  gulp.src("build/**/*")
+  gulp.src("build/*")
   .pipe(deploy(gitRemoteUrl, remote))
   .pipe(deploy(branch, 'master'));
 });
