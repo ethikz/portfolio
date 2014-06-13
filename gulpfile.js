@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-    plugin = require('gulp-load-plugins')({camelize:true});
+    plugin = require('gulp-load-plugins')({camelize:true}),
+    path = require('path');
 
 
 // Paths
@@ -125,7 +126,7 @@ gulp.task('deploy', function () {
 
 
 // Deploy
-var deployUrl = 'https://github.com/ethikz/ethikz.github.io.git';
+var deployUrl = 'https://github.com/ethikz/portfolio.git';
 var buildPath = 'build';
 // Build website into the `build` folder
 gulp.task('build', function() {
@@ -137,7 +138,6 @@ gulp.task('deploy', ['build'], function(cb) {
  var exec = require('child_process').exec;
  var cwd = path.join(__dirname, buildPath);
  var cmd = 'git init && ' +
-           'git remote add origin ' + deployUrl + ' && ' +
            'git add . && git commit -m Release && ' +
            'git push -f origin gh-pages';
 
