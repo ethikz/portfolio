@@ -132,5 +132,5 @@ gulp.task('deploy', function () {
 // Tasks
 // =======================================================
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'connect']);
 gulp.task('compile', ['html', 'css', 'js', 'copyImages']);

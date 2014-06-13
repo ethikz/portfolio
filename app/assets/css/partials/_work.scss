@@ -112,10 +112,19 @@
       text-transform: none;
       font-weight: bold;
     }
+
+    a {
+      color: $color_red;
+
+      &:hover {
+        color: $color_white;
+      }
+    }
     
     .btn {
       margin: 0;
       background: $color_red;
+      color: $color_white;
       
       &:hover {
         background-color: $color_white;

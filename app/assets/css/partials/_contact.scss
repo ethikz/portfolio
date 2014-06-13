@@ -3,15 +3,19 @@
   @include clearfix();
   padding: 2% 1%;
   width: 100%;
-  background: $color_red;
+  background: $color_grey;
   font-size: rem(16);
   
   a {
-    color: $color_nearlyblack;
+    color: $color_red;
     
     &:hover {
       color: $color_white;
     }
+  }
+
+  .btn:hover {
+    color: $color_nearlyblack;
   }
   
   h1 {
