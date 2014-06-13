@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     plugin = require('gulp-load-plugins')({camelize:true}),
-    path = require('path');
+    deploy = require('gulp-gh-pages');
 
 
 // Paths
@@ -120,38 +120,17 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('deploy', function () {
-  gulp.src("build/**/*");
-});
-
 
 // Deploy
-var deployUrl = 'https://github.com/ethikz/portfolio.git';
-var buildPath = 'build/**/*';
-// Build website into the `build` folder
-gulp.task('build', function() {});
-  
-// Deploy from the `./build` folder to GitHub Pages.
-// For more information, please visit: https://pages.github.com
-gulp.task('deploy', ['build'], function(cb) {
- var exec = require('child_process').exec;
- var cwd = path.join(__dirname, buildPath);
- var cmd = 'git add . && git commit -m "Release" && ' +
-           'git push -f origin gh-pages';
-
- exec(cmd, { 'cwd': cwd }, function(err, stdout, stderr) {
-   if (err !== null) {
-     cb(err);
-   } else {
-     gutil.log(stdout, stderr);
-     cb();
-   }
- });
+// =======================================================
+gulp.task('deploy', function () {
+    gulp.src('./build/**')
+        .pipe(deploy('https://github.com/ethikz/portfolio', 'origin'));
 });
 
 
 // Tasks
 // =======================================================
 
-gulp.task('default', ['watch', 'connect']);
-gulp.task('compile', ['html', 'css', 'js', 'copyImages', 'deploy']);
+gulp.task('default', ['watch']);
+gulp.task('compile', ['html', 'css', 'js', 'copyImages']);
