@@ -11,17 +11,21 @@ html(lang="en")
     link(rel='apple-touch-icon', href='assets/img/apple-touch-icon.png')
   body
 
+    .top
+    .right
+    .bottom
+    .left
     #top.anchor
     header.header
       .container
         nav.nav
           ul
             li
-              a.scrollto(data-target='#latest-work', href='#about') Work
+              a.scrollto(data-target='#latest-work', href='#work') Work
             li
               a.scrollto(data-target='#about', href='#about') About
             li
-              a.scrollto(data-target='#contact', href='#about') Contact
+              a.scrollto(data-target='#contact', href='#contact') Contact
         a.logo.scrollto(data-target='#top', href='#top') Josh Christensen
 
     section.personal
@@ -42,14 +46,14 @@ html(lang="en")
               img(src='assets/img/work/academy.jpg')
             .slider-content
               h2 Smashing Boxes Academy
-              p Front-end development (HTML, CSS, Responsive, jQuery) (via <a href="http://academy.smashingboxes.com">SB Academy</a>).
+              p Front-end development (HTML, LESS, Responsive, jQuery, Ruby on Rails).
               a.btn(href='http://academy.smashingboxes.com') Visit Site
           div
             .slider-image
               img(src='assets/img/work/sb.jpg')
             .slider-content
               h2 Smashing Boxes
-              p Web design &amp; front-end development (HTML, Sass, jQuery) for company website.
+              p Front-end development (HTML, SCSS, Responsive, jQuery, Ruby on Rails).
               a.btn(href='https://github.com/ethikz/') View Source on Github
 
     section.about
@@ -57,15 +61,17 @@ html(lang="en")
       header
         h1 About
       .about-content
-        p Heyo! I’m Josh. I’m a front-end web developer in Apex, North Carolina with a passion for creating effective user experiences on the web.
-        p My goal is to create a product that is both easy to use and effective in it's purpose, no matter what that purpose is.
+        .hexagon.hexagon1
+          .hexagon-in1
+            .hexagon-in2
+            img.me(src='assets/img/me.jpg')
+        p Heyo! I’m Josh. I’m a front-end web developer in Apex, North Carolina with a passion for web development and design.
         p I love learning and staying up to date on the latest web trends, technologies and tools.
 
     section.contact
       #contact.anchor
       header
         h1 Contact
-      p Want to <a href="https://github.com/ethikz">collaborate</a>? Just saying <a href="mailto:josh.christensen2@gmail.com">hey</a>?
       a.btn(href='mailto:josh.christensen2@gmail.com')
         span.icon-mail
         | Email Me
@@ -96,11 +102,11 @@ html(lang="en")
       nav.nav
         ul
           li
-            a.scrollto(data-target='#latest-work', href='#about') Work
+            a.scrollto(data-target='#latest-work', href='#work') Work
           li
             a.scrollto(data-target='#about', href='#about') About
           li
-            a.scrollto(data-target='#contact', href='#about') Contact
+            a.scrollto(data-target='#contact', href='#contact') Contact
       a.logo.scrollto(data-target='#top', href='#top') Josh Christensen
 
     script(type='text/javascript', src='assets/js/scripts.min.js')

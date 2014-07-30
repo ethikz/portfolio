@@ -6,8 +6,8 @@
   margin: 10px 5px;
   padding: 14px 15px 12px;
   height: auto;
-  border: 1px solid $color_white;
-  background: transparent;
+  border: 1px solid $color_red;
+  background: $color_red;
   color: $color_white;
   text-decoration: none;
   text-transform: uppercase;
@@ -17,7 +17,7 @@
   line-height: 1;
   
   &:hover {
-    background: $color_white;
+    background: transparent;
     color: $color_red;
   }
   

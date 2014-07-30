@@ -11,3 +11,43 @@ a {
   @extend %ease-trans;
   text-decoration: none;
 }
+
+.top,
+.right,
+.bottom,
+.left {
+  background: $color_white;
+  position: fixed;
+  z-index: 11;
+}
+
+.left,
+.right {
+  top: 0;
+  bottom: 0;
+  width: 10px;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.top,
+.bottom {
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+

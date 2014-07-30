@@ -1,7 +1,7 @@
 .latest-work {
   @include container();
   @include clearfix();
-  padding: 2% 1%;
+  padding: 2%;
   width: 100%;
   background: $color_grey;
   font-size: rem(16);
@@ -27,7 +27,7 @@
     @extend %ease-trans;
     position: relative;
     display: block;
-    margin: 0;
+    margin: 0 2%;
     padding: 0;
     width: 48px;
     height: 48px;
@@ -122,14 +122,7 @@
     }
     
     .btn {
-      margin: 0;
-      background: $color_red;
       color: $color_white;
-      
-      &:hover {
-        background-color: $color_white;
-        color: $color_nearlyblack;
-      }
     }
   }
 }

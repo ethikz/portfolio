@@ -1,7 +1,7 @@
 .personal {
   @include container();
   @include clearfix();
-  padding: 2% 1%;
+  padding: 2%;
   width: 100%;
   background-color: rgba(213, 50, 50, 0);
   font-size: rem(16);
