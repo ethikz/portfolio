@@ -26,3 +26,39 @@ $em-base: 16px;
 @function strip-units($val) {
   @return ($val / ($val * 0 + 1));
 }
+
+// Hexagon Shape
+@mixin hex($width, $margin, $first-row) {
+  $height: round($width / 1.73205080757);
+  $second-row: (($first-row * 2) - 1) - $first-row;
+  $group-count: $first-row + $second-row;
+  margin: (($height / 4) + $margin) $margin;
+  width: $width;
+  height: $height;
+
+  &:nth-child(#{$group-count}n-#{$group-count - 1}) {
+    margin-left: 0;
+  }
+
+  &:nth-child(#{$group-count}n-#{$second-row}) {
+    margin-right: 0;
+  }
+
+  .hex {
+    background-size: auto round($height * 2);
+  }
+
+  .hex-1:before,
+  .hex-2:before {
+    height: round($height * 2);
+    width: round($height * 2);
+  }
+
+  .hex-1:before {
+    transform: rotate(-60deg) translate(-$height, 0);
+  }
+  
+  .hex-2:before {
+    transform: rotate(60deg) translate(round($height / 2.75), round($height / 2.75));
+  }
+}

@@ -3,7 +3,7 @@
   @include clearfix();
   padding: 2%;
   width: 100%;
-  background: $color_grey;
+  background: $color_red;
   font-size: rem(16);
   
   a {
@@ -14,8 +14,15 @@
     }
   }
 
-  .btn {
-    color: $color_white;
+  .btn,
+  .social a {
+    background: shade($color_red, 15%);
+    color: tint($color_red, 85%);
+    
+    &:hover {
+      background: tint($color_red, 85%);
+      color: shade($color_red, 25%);
+    }
   }
   
   h1 {
@@ -44,8 +51,6 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: shade($color_red, 15%);
-      color: tint($color_red, 85%);
       text-decoration: none;
       font-size: rem(28);
       line-height: 40px;
@@ -66,11 +71,6 @@
       @media screen and (min-width: $break-large) {
         margin: 0 8px;
         font-size: rem(28);
-      }
-      
-      &:hover {
-        background: tint($color_red, 85%);
-        color: shade($color_red, 25%);
       }
     }
     
