@@ -115,7 +115,7 @@ gulp.task('watch', ['compile'], function() {
 gulp.task('connect', function() {
   plugin.connect.server({
     root: 'build',
-    port: '8000',
+    port: '8001',
     livereload: true
   });
 });
